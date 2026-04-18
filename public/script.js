@@ -39,3 +39,20 @@ for (let i = 1; i <= quantidade; i++) {
 
     totalDespesas += despesa;
 }
+
+// ===== ANÁLISE =====
+
+let sobra = renda - totalDespesas;
+let mensagem = "";
+
+if (totalDespesas > renda) {
+    mensagem = "⚠️ Atenção: você gastou mais do que ganhou.";
+} else {
+    let percentual = sobra / renda;
+
+    if (percentual >= 0.3) {
+        mensagem = "✅ Ótimo: boa margem de sobra.";
+    } else {
+        mensagem = "🙂 Ok: dá para melhorar a sobra.";
+    }
+}
