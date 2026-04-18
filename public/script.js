@@ -56,3 +56,16 @@ if (totalDespesas > renda) {
         mensagem = "🙂 Ok: dá para melhorar a sobra.";
     }
 }
+
+// ===== RESULTADO =====
+
+let resultado = `
+Nome: ${nome}
+Renda: R$ ${renda.toFixed(2)}
+Despesas: R$ ${totalDespesas.toFixed(2)}
+Sobre: R$ ${sobra.toFixed(2)}
+Situação: R${mensagem}
+`;
+
+alert(resultado);
+console.log(resultado);
