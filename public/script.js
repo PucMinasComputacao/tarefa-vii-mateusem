@@ -24,3 +24,18 @@ if (quantidade < 1) {
 } else if (quantidade > 5) {
     quantidade = 5;
 }
+
+// ===== DESPESAS =====
+
+let totalDespesas = 0;
+
+for (let i = 1; i <= quantidade; i++) {
+    let despesa = Number(prompt(`Digite o valor da despesa ${i}:`));
+
+    // Validação
+    while (isNaN(despesa)) {
+        despesa = Number(prompt(`Valor inválido. Digite a despesa ${i} novamente:`));
+    }
+
+    totalDespesas += despesa;
+}
